@@ -1,6 +1,7 @@
 module BetterErrors
   module ExceptionExtension
     #prepend_features Exception
+    append_features Exception
 
     def set_backtrace(*)
       if caller_locations.none? { |loc| loc.path == __FILE__ }
